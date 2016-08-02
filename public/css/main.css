@@ -1,0 +1,26 @@
+body {
+  background-color: #111;
+  overflow: hidden;
+}
+
+header {
+  background: url('../img/bw_ski_lift_1920_1440.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: #111;
+  background: url('../img/bw_ski_lift_1920_1440_light.png') no-repeat center center fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: helvetica;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  transform: translateY(-65%);
+  font-size: 12vw;
+  text-align: center;
+}
