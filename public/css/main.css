@@ -3,24 +3,30 @@ body {
   overflow: hidden;
 }
 
-header {
+.background-image {
   background: url('../img/bw_ski_lift_1920_1440.png') no-repeat center center fixed; 
+  background-size: cover;
+  -o-background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
-h1 {
+.name {
   color: #111;
   background: url('../img/bw_ski_lift_1920_1440_light.png') no-repeat center center fixed;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: helvetica;
-  margin: 0 auto;
-  z-index: 1;
-  position: relative;
-  transform: translateY(-65%);
   font-size: 12vw;
+  font-weight: bolder;
+  position: relative;
+  margin: 0 auto;
   text-align: center;
+  transform: translateY(-65%);
+  -webkit-background-clip: text;
+  -webkit-filter: invert(10%);
+  -webkit-text-fill-color: transparent;
+  z-index: 1000;
+}
+
+span:hover {
+  cursor: pointer;
 }

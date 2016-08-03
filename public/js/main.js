@@ -1,27 +1,31 @@
 'use strict';
 (() => {
 
-  const header              = document.querySelector('header');
+  const background          = document.querySelector('.background-image');
   const body                = document.querySelector('body');
-  const name                = document.querySelector('h1');
+  const name                = document.querySelector('.name');
 
-  header.style.height       = `${window.innerHeight}px`;
-  header.style.width        = `${window.innerWidth}px`;
+  background.style.height   = `${window.innerHeight}px`;
+  background.style.width    = `${window.innerWidth}px`;
   name.style.height         = `${window.innerHeight}px`;
   name.style.width          = `${window.innerWidth}px`;
   name.style.backgroundSize = 'auto auto';
 
   document.addEventListener('mousemove', event => {
-    const middleX          = window.innerWidth / 2;
-    const middleY          = window.innerHeight / 2;
-    header.style.transform = `perspective(1000px) 
-                              rotateX(${(-1)*(middleY - event.clientY)/50}deg) 
-                              rotateY(${(middleX - event.clientX)/100}deg)`;
+    const middleX              = window.innerWidth / 2;
+    const middleY              = window.innerHeight / 2;
+    background.style.transform = `perspective(1000px) 
+                                  rotateX(${(-1)*(middleY - event.clientY)/90}deg) 
+                                  rotateY(${(middleX - event.clientX)/160}deg)`;
+    name.style.transform       = `perspective(10000px) 
+                                  rotateX(${(middleY - event.clientY)/90}deg) 
+                                  rotateY(${(middleX - event.clientX)/160}deg)
+                                  translateY(-65%)`;
   });
 
   window.addEventListener('resize', event => {
-    header.style.height       = `${window.innerHeight}px`;
-    header.style.width        = `${window.innerWidth}px`;
+    background.style.height   = `${window.innerHeight}px`;
+    background.style.width    = `${window.innerWidth}px`;
     name.style.height         = `${window.innerHeight}px`;
     name.style.width          = `${window.innerWidth}px`;
     name.style.backgroundSize = 'auto auto';
